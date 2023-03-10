@@ -33,11 +33,11 @@ function adicionarLivro(event) {
     // Cálculos de páginas
     let paginasFaltantes = calculoPaginasFaltantes(livros);
     let percentualPaginas = calculoPercentualLeitura(livros);
+    let totalPaginasLidasLivros = atualizaPaginasLidas(livros);
     
-    imprimirNaTela(paginasLidas, paginasFaltantes, percentualPaginas);
+    imprimirNaTela(totalPaginasLidasLivros, paginasFaltantes, percentualPaginas);
     imprimirLivroNaTela(livroCompleto);
 }
-
 
 function calculoPaginasFaltantes(livros){
     let totalPaginasLidasLivros = 0;
@@ -181,4 +181,13 @@ function atualizaResumo(livroCompleto){
     let percentualPaginasAtualizado = calculoPercentualLeitura(livros);
 
     imprimirNaTela(livroCompleto.paginasLidas, paginasFaltantesAtualizada, percentualPaginasAtualizado);
+}
+
+function atualizaPaginasLidas(){
+    let totalPaginasLidasLivros = 0;
+
+    for (let i = 0; i < livros.length; i++) {
+        totalPaginasLidasLivros += Number(livros[i].paginasLidas);
+    }
+    return totalPaginasLidasLivros;
 }
