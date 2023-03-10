@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="visual.css">
+    <script src="main.js"></script>
+    <title>Buksi</title>
+</head>
+
+<body onLoad="perguntaNome()">
+    <header class="cabecalho">
+        <img src="/img/buski-logo-verde 1.png" />
+    </header>
+
+    <main>
+        <article class="resumo">
+            <header>
+                <div>
+                    <h1>Olá <mark id="elemento_nome">Maria</mark></h1>
+                    <p>Vamos checar os seus hábitos de leitura!</p>
+                </div>
+                <div>
+                    <p class="texto-destaque">Você já leu <mark id="elemento_paginas_lidas">10</mark> páginas hoje!</p>
+                    <p class="texto-destaque">Você ainda tem <mark id="elemento_paginas_faltantes">30</mark> páginas
+                        pela frente</p>
+                </div>
+                <p class="texto-destaque marcado-de-verde">Você já atingiu <mark
+                        id="elemento_porcentagem_paginas">25%</mark> da sua meta</p>
+            </header>
+            <section>
+                <img src="/img/ilustração_lendo 1.png" />
+            </section>
+        </article>
+
+        <article class="formulario">
+            <header>
+                <h1>Adicione um livro a sua biblioteca</h1>
+            </header>
+
+            <form>
+                <input type="text" id="nome_livro" placeholder="Nome do Livro"/>
+                <input type="text" id="autores_livro" placeholder="Nome dos Autores"/>
+                <input type="url" id="imagem_livro" placeholder="URL do Livro">
+                <fieldset>
+                    <label for="paginas_lidas">Páginas lidas</label>
+                    <br />
+                    <input type="number" id="paginas_lidas"/>
+                </fieldset>
+                <fieldset>
+                    <label for="total_paginas">Total de páginas</label>
+                    <br />
+                    <input type="number" id="total_paginas"/>
+                </fieldset>
+                <button type="submit" onClick="adicionarLivro(event)">Adicionar o livro</button>
+            </form>
+        </article>
+
+        <section>
+            <h2>Lendo</h2>
+            <section id="lista_livros_nao_lidos" class="biblioteca-livros">
+            </section>
+        </section>
+        <section>
+            <h2>Lidos</h2>
+            <section id="lista_livros_lidos" class="biblioteca-livros">
+            </section>
+        </section>
+    </main>
+</body>
+
+</html>
