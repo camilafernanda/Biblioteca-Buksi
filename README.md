@@ -1,7 +1,5 @@
 ![Capa com o título "Biblioteca Buksi" e subtítulo "Formação Iniciante em Programação"](https://user-images.githubusercontent.com/37356058/224833873-d37f40ce-0a37-4416-b681-1547793332d6.png)
 
-# Biblioteca Buksi
-
 ### Tópicos 
 
 - [Descrição do projeto](#descrição-do-projeto)
